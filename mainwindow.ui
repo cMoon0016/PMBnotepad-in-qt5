@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>722</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QTextEdit" name="textEdit"/>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFont">
+    <property name="title">
+     <string>Font</string>
+    </property>
+    <addaction name="actionColor"/>
+    <addaction name="actionBackground_Color"/>
+    <addaction name="separator"/>
+    <addaction name="actionAlign_Left"/>
+    <addaction name="actionAlign_Center"/>
+    <addaction name="actionAlign_Right"/>
+    <addaction name="separator"/>
+    <addaction name="actionFont"/>
+    <addaction name="actionPixelSize"/>
+    <addaction name="actionPixelSize_2"/>
+    <addaction name="actionPointSize"/>
+    <addaction name="actionPointSize_2"/>
+    <addaction name="separator"/>
+    <addaction name="actionBold"/>
+    <addaction name="separator"/>
+    <addaction name="actionUnderline"/>
+    <addaction name="actionItalics"/>
+    <addaction name="actionReset_Font"/>
+   </widget>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionClear"/>
+    <addaction name="separator"/>
+    <addaction name="actionOpen"/>
+    <addaction name="actionSave_as"/>
+    <addaction name="actionPrint"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string>View</string>
+    </property>
+    <addaction name="actionZoom"/>
+    <addaction name="actionZoom_2"/>
+   </widget>
+   <widget class="QMenu" name="menuStyle">
+    <property name="title">
+     <string>Style</string>
+    </property>
+    <widget class="QMenu" name="menuStyle_1">
+     <property name="title">
+      <string>Style 1</string>
+     </property>
+     <addaction name="actionDefine"/>
+     <addaction name="actionUse"/>
+    </widget>
+    <widget class="QMenu" name="menuStyle_2">
+     <property name="title">
+      <string>Style 2</string>
+     </property>
+     <addaction name="actionDefine_2"/>
+     <addaction name="actionUse_2"/>
+    </widget>
+    <widget class="QMenu" name="menuStyle_3">
+     <property name="title">
+      <string>Style 3</string>
+     </property>
+     <addaction name="actionDefine_3"/>
+     <addaction name="actionUse_3"/>
+    </widget>
+    <widget class="QMenu" name="menuStyle_4">
+     <property name="title">
+      <string>Style 4</string>
+     </property>
+     <addaction name="actionDefine_4"/>
+     <addaction name="actionUse_4"/>
+    </widget>
+    <widget class="QMenu" name="menuStyle_5">
+     <property name="title">
+      <string>Style 5</string>
+     </property>
+     <addaction name="actionDefine_5"/>
+     <addaction name="actionUse_5"/>
+    </widget>
+    <addaction name="menuStyle_1"/>
+    <addaction name="menuStyle_2"/>
+    <addaction name="menuStyle_3"/>
+    <addaction name="menuStyle_4"/>
+    <addaction name="menuStyle_5"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="actionCopy"/>
+    <addaction name="actionPaste"/>
+    <addaction name="actionCut"/>
+    <addaction name="separator"/>
+    <addaction name="actionUndo"/>
+    <addaction name="actionRedo"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuView"/>
+   <addaction name="menuFont"/>
+   <addaction name="menuStyle"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>LeftToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="separator"/>
+   <addaction name="actionUndo"/>
+   <addaction name="actionRedo"/>
+   <addaction name="actionColor"/>
+   <addaction name="actionBackground_Color"/>
+   <addaction name="separator"/>
+   <addaction name="actionFont"/>
+   <addaction name="actionPointSize"/>
+   <addaction name="actionPointSize_2"/>
+   <addaction name="actionBold"/>
+   <addaction name="actionUnderline"/>
+   <addaction name="actionItalics"/>
+   <addaction name="separator"/>
+   <addaction name="actionAlign_Left"/>
+   <addaction name="actionAlign_Center"/>
+   <addaction name="actionAlign_Right"/>
+   <addaction name="separator"/>
+   <addaction name="actionReset_Font"/>
+   <addaction name="separator"/>
+   <addaction name="actionUse"/>
+   <addaction name="actionUse_2"/>
+   <addaction name="actionUse_3"/>
+   <addaction name="actionUse_4"/>
+   <addaction name="actionUse_5"/>
+  </widget>
+  <action name="actionColor">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/new/imgs/icon::color.png</normaloff>:/new/imgs/icon::color.png</iconset>
+   </property>
+   <property name="text">
+    <string>Text Color</string>
+   </property>
+  </action>
+  <action name="actionBackground_Color">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/new/imgs/icon::backgoundColor.png</normaloff>:/new/imgs/icon::backgoundColor.png</iconset>
+   </property>
+   <property name="text">
+    <string>Background Color</string>
+   </property>
+  </action>
+  <action name="actionAlign_Left">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/imgs/icon::alignLeft.png</normaloff>:/imgs/icon::alignLeft.png</iconset>
+   </property>
+   <property name="text">
+    <string>Align Left</string>
+   </property>
+  </action>
+  <action name="actionAlign_Center">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/new/imgs/icon::alignCenter.png</normaloff>:/new/imgs/icon::alignCenter.png</iconset>
+   </property>
+   <property name="text">
+    <string>Align Center</string>
+   </property>
+  </action>
+  <action name="actionAlign_Right">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/new/imgs/icon::alignRight.png</normaloff>:/new/imgs/icon::alignRight.png</iconset>
+   </property>
+   <property name="text">
+    <string>Align Right</string>
+   </property>
+  </action>
+  <action name="actionBold">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/new/imgs/icon::bold.png</normaloff>:/new/imgs/icon::bold.png</iconset>
+   </property>
+   <property name="text">
+    <string>Bold</string>
+   </property>
+  </action>
+  <action name="actionUnderline">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/new/imgs/icon::underline.png</normaloff>:/new/imgs/icon::underline.png</iconset>
+   </property>
+   <property name="text">
+    <string>Underline</string>
+   </property>
+  </action>
+  <action name="actionItalics">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/new/imgs/icon::italics.png</normaloff>:/new/imgs/icon::italics.png</iconset>
+   </property>
+   <property name="text">
+    <string>Italics</string>
+   </property>
+  </action>
+  <action name="actionReset_Font">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/new/imgs/icon::reset.png.png</normaloff>:/new/imgs/icon::reset.png.png</iconset>
+   </property>
+   <property name="text">
+    <string>Reset Font</string>
+   </property>
+  </action>
+  <action name="actionDefine">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/new/imgs/icon::defineStyle.png</normaloff>:/new/imgs/icon::defineStyle.png</iconset>
+   </property>
+   <property name="text">
+    <string>Define</string>
+   </property>
+  </action>
+  <action name="actionUse">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/new/imgs/icon::style1.png</normaloff>:/new/imgs/icon::style1.png</iconset>
+   </property>
+   <property name="text">
+    <string>Use</string>
+   </property>
+  </action>
+  <action name="actionDefine_2">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/new/imgs/icon::defineStyle.png</normaloff>:/new/imgs/icon::defineStyle.png</iconset>
+   </property>
+   <property name="text">
+    <string>Define</string>
+   </property>
+  </action>
+  <action name="actionUse_2">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/new/imgs/icon::style2.png</normaloff>:/new/imgs/icon::style2.png</iconset>
+   </property>
+   <property name="text">
+    <string>Use</string>
+   </property>
+  </action>
+  <action name="actionDefine_3">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/new/imgs/icon::defineStyle.png</normaloff>:/new/imgs/icon::defineStyle.png</iconset>
+   </property>
+   <property name="text">
+    <string>Define</string>
+   </property>
+  </action>
+  <action name="actionUse_3">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/new/imgs/icon::style3.png</normaloff>:/new/imgs/icon::style3.png</iconset>
+   </property>
+   <property name="text">
+    <string>Use</string>
+   </property>
+  </action>
+  <action name="actionDefine_4">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/new/imgs/icon::defineStyle.png</normaloff>:/new/imgs/icon::defineStyle.png</iconset>
+   </property>
+   <property name="text">
+    <string>Define</string>
+   </property>
+  </action>
+  <action name="actionUse_4">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/new/imgs/icon::style4.png</normaloff>:/new/imgs/icon::style4.png</iconset>
+   </property>
+   <property name="text">
+    <string>Use</string>
+   </property>
+  </action>
+  <action name="actionDefine_5">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/new/imgs/icon::defineStyle.png</normaloff>:/new/imgs/icon::defineStyle.png</iconset>
+   </property>
+   <property name="text">
+    <string>Define</string>
+   </property>
+  </action>
+  <action name="actionUse_5">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/new/imgs/icon::style5.png</normaloff>:/new/imgs/icon::style5.png</iconset>
+   </property>
+   <property name="text">
+    <string>Use</string>
+   </property>
+  </action>
+  <action name="actionFont">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/new/imgs/icon::font.png</normaloff>:/new/imgs/icon::font.png</iconset>
+   </property>
+   <property name="text">
+    <string>Font</string>
+   </property>
+  </action>
+  <action name="actionPixelSize">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/new/imgs/icon::size++.png</normaloff>:/new/imgs/icon::size++.png</iconset>
+   </property>
+   <property name="text">
+    <string>PixelSize++</string>
+   </property>
+  </action>
+  <action name="actionPixelSize_2">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/new/imgs/icon::size--.png</normaloff>:/new/imgs/icon::size--.png</iconset>
+   </property>
+   <property name="text">
+    <string>PixelSize--</string>
+   </property>
+  </action>
+  <action name="actionPointSize">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/new/imgs/icon::size++.png</normaloff>:/new/imgs/icon::size++.png</iconset>
+   </property>
+   <property name="text">
+    <string>PointSize++</string>
+   </property>
+  </action>
+  <action name="actionPointSize_2">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/new/imgs/icon::size--.png</normaloff>:/new/imgs/icon::size--.png</iconset>
+   </property>
+   <property name="text">
+    <string>PointSize--</string>
+   </property>
+  </action>
+  <action name="actionClear">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/new/imgs/icon::newFile.png</normaloff>:/new/imgs/icon::newFile.png</iconset>
+   </property>
+   <property name="text">
+    <string>Clear</string>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/new/imgs/icon::copy.png</normaloff>:/new/imgs/icon::copy.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionSave_as">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/new/imgs/icon::save.png</normaloff>:/new/imgs/icon::save.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save as</string>
+   </property>
+  </action>
+  <action name="actionPrint">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/new/imgs/icon::print.png</normaloff>:/new/imgs/icon::print.png</iconset>
+   </property>
+   <property name="text">
+    <string>Print</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/new/imgs/icon::exit.png</normaloff>:/new/imgs/icon::exit.png</iconset>
+   </property>
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionCopy">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/new/imgs/icon::copy.png</normaloff>:/new/imgs/icon::copy.png</iconset>
+   </property>
+   <property name="text">
+    <string>Copy</string>
+   </property>
+  </action>
+  <action name="actionPaste">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/new/imgs/icon::paste.png</normaloff>:/new/imgs/icon::paste.png</iconset>
+   </property>
+   <property name="text">
+    <string>Paste</string>
+   </property>
+  </action>
+  <action name="actionCut">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/new/imgs/icon::cut.png</normaloff>:/new/imgs/icon::cut.png</iconset>
+   </property>
+   <property name="text">
+    <string>Cut</string>
+   </property>
+  </action>
+  <action name="actionUndo">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/new/imgs/icon::undo.png</normaloff>:/new/imgs/icon::undo.png</iconset>
+   </property>
+   <property name="text">
+    <string>Undo</string>
+   </property>
+  </action>
+  <action name="actionRedo">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/new/imgs/icon::redo.png</normaloff>:/new/imgs/icon::redo.png</iconset>
+   </property>
+   <property name="text">
+    <string>Redo</string>
+   </property>
+  </action>
+  <action name="actionZoom">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/new/imgs/icon::zoomIn.png</normaloff>:/new/imgs/icon::zoomIn.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom+</string>
+   </property>
+  </action>
+  <action name="actionZoom_2">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/new/imgs/icon::zoomOut.png</normaloff>:/new/imgs/icon::zoomOut.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom-</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="Resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
